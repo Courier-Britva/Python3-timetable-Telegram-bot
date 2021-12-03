@@ -4,6 +4,7 @@ from telebot import types
 bot = telebot.TeleBot("PASTE YOUR BOT ID HERE", parse_mode=None)
 #################################################################################
 
+#This function is responsible for the operation of the main buttons
 @bot.message_handler(commands=['start'])
 def welcome(message):
     # keyboard
@@ -18,7 +19,7 @@ def welcome(message):
                          message.from_user, bot.get_me()),
                      parse_mode='html', reply_markup=markup)
 
-
+# These variables store the information that the user has assigned to each day
 monday = None
 tuesday = None
 wednesday = None
@@ -58,7 +59,7 @@ def core(message):
             bot.send_message(message.chat.id, "Я не знаю что ответить 😢\n для начала работы введите команду '/start' ")
 
 
-
+# this function is responsible for setting a new event for each day of the week
 @bot.callback_query_handler(func=lambda call: True)
 def callback_inline(call):
     try:
