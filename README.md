@@ -10,3 +10,6 @@ The bot has a list of days of the week, each of which (from Monday to Sunday) ca
 
 At the touch of a button "Timetable" bot displays a list of days and things you have assigned to them
 
+At the moment, unfortunately, I have not connected the SQL database to the bot, so the changes in the table will be visible to all users who have access to the bot.
+
+This isn't exactly what I wanted, but on the other hand it's kind of fun
